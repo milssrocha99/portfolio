@@ -1216,6 +1216,20 @@ margin-bottom: 35px;
 }
 
 
+@media screen and (max-width: 600px) {
+    .language-switch {
+        position: fixed;
+
+        top: auto;
+        bottom: calc(25px + env(safe-area-inset-bottom, 0px));
+
+        left: auto;
+        right: 20px;
+
+        z-index: 1000;
+    }
+}
+
 
 /* LINHAS DECORATIVAS NOS CANTOS */
 .corner-threads {
@@ -3895,7 +3909,7 @@ margin-bottom: 35px;
         top: auto;
         bottom: auto;
 
-        transform: none;
+        transform: translateX(8px);
 
         display: flex;
         justify-content: center;

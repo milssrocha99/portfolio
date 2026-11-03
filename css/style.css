@@ -4029,3 +4029,40 @@ margin-bottom: 35px;
     display: block;
     stroke: currentColor;
 }
+
+
+/* MENU MOBILE — AJUSTE PARA PT E EN */
+@media screen and (max-width: 600px) {
+
+    header {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 15px 6px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        max-width: 100%;
+
+        gap: 5px;
+        padding: 10px 4px;
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    nav a {
+        font-size: clamp(7px, 2.1vw, 10px);
+        letter-spacing: 0;
+        white-space: nowrap;
+
+        flex: 0 1 auto;
+        min-width: 0;
+        text-align: center;
+    }
+}

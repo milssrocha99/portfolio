@@ -3837,13 +3837,11 @@ margin-bottom: 35px;
         object-fit: contain;
         object-position: center bottom;
 
-        transform: translateX(-50%);
+        transform: translateX(-50%) scale(1.15);
         transform-origin: center bottom;
 
         pointer-events: none;
         user-select: none;
-         -webkit-user-drag: none;
-
     }
 
     /* TEXTO ABAIXO DA FOTO */
@@ -3968,5 +3966,51 @@ margin-bottom: 35px;
         box-shadow:
             inset 0 1px 0 rgba(255, 255, 255, 0.08),
             0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* CORREÇÕES MOBILE */
+
+@media screen and (max-width: 600px) {
+
+    /* BLOQUEAR SCROLL HORIZONTAL */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    /* MANTER FOTO PREENCHENDO A LARGURA */
+    #home .photo-area {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #home .photo-container {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        touch-action: none;
+    }
+
+    /* FOTO GRANDE, SEM CORTAR O TOPO */
+    #home .photo {
+        position: absolute;
+
+        left: 50%;
+        bottom: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center center;
+
+        /* Desce a foto sem diminuir */
+        transform: translate(-50%, 30px) scale(1.15);
+        transform-origin: center bottom;
+
+        pointer-events: none;
     }
 }

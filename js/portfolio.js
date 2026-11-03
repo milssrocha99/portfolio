@@ -159,49 +159,52 @@ function animate() {
 }
 animate();
 
-container.addEventListener(
-    "mousemove",
-    (event) => {
-        const rect =
-            container.getBoundingClientRect();
-        const x =
-            event.clientX -
-            rect.left;
-        const y =
-            event.clientY -
-            rect.top;
-        grayscalePhoto.style.maskImage = `
-            radial-gradient(
-                circle 230px
-                at ${x}px ${y}px,
-                transparent 0%,
-                rgba(
-                    0,
-                    0,
-                    0,
-                    0.18
-                )
-                30%,
-                black 72%
-            )
-        `;
-        grayscalePhoto.style.webkitMaskImage = `
-            radial-gradient(
-                circle 230px
-                at ${x}px ${y}px,
-                transparent 0%,
-                rgba(
-                    0,
-                    0,
-                    0,
-                    0.18
-                )
-                30%,
-                black 72%
-            )
-        `;
+
+/* REVELAR COR DA FOTO — DESKTOP E MOBILE */
+
+function revelarCor(event) {
+    const rect = container.getBoundingClientRect();
+
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    const isMobile = window.matchMedia(
+        "(max-width: 600px)"
+    ).matches;
+
+    const radius = isMobile ? 110 : 230;
+
+    const mask = `
+        radial-gradient(
+            circle ${radius}px at ${x}px ${y}px,
+            transparent 0%,
+            rgba(0, 0, 0, 0.18) 30%,
+            black 72%
+        )
+    `;
+
+    grayscalePhoto.style.maskImage = mask;
+    grayscalePhoto.style.webkitMaskImage = mask;
+}
+
+// FUNCIONA COM MOUSE E DEDO
+container.addEventListener("pointermove", (event) => {
+    if (event.pointerType === "touch" && event.buttons === 0) {
+        return;
     }
-);
+
+    revelarCor(event);
+});
+
+// REVELA A COR AO ENCOSTAR O DEDO
+container.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "touch") {
+        container.setPointerCapture(event.pointerId);
+    }
+
+    revelarCor(event);
+});
+
 
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;

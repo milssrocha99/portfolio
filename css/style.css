@@ -4014,3 +4014,18 @@ margin-bottom: 35px;
         pointer-events: none;
     }
 }
+
+/* SETAS DOS LINKS DE CONTATO */
+.contact-link-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-link-arrow svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    stroke: currentColor;
+}

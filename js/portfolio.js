@@ -351,7 +351,7 @@ const translations = {
                 traffic: "Traffic control",
                 vehicles: "Vehicles & drivers",
                 routes: "Routes",
-                passengers: "Passenger data",
+                passengers: "Employee Records",
                 mileage: "Mileage",
                 history: "History & filters",
                 pdf: "PDF reports",
@@ -436,7 +436,7 @@ const translations = {
                 traffic: "Controle de tráfego",
                 vehicles: "Veículos e motoristas",
                 routes: "Linhas",
-                passengers: "Dados de passageiros",
+                passengers: "Fichas Funcionais",
                 mileage: "Quilometragem",
                 history: "Histórico e filtros",
                 pdf: "Relatórios em PDF",
@@ -2579,11 +2579,6 @@ function renderProjectsReveal() {
                 localProgress * 2
             );
 
-            /*
-               Usamos a propriedade translate
-               individual, preservando a animação
-               CSS que usa transform.
-            */
             letter.style.translate =
                 `0 ${travelY}px`;
 
@@ -2596,9 +2591,7 @@ function renderProjectsReveal() {
 
     });
 
-    /* =====================================
-       2. CANTONEIRAS VINDO DOS 4 CANTOS
-    ===================================== */
+    /* 2. CANTONEIRAS VINDO DOS 4 CANTOS */
 
     const cornersProgress = easeProjectsReveal(
         (progress - 0.12) / 0.68
@@ -2657,9 +2650,7 @@ function renderProjectsReveal() {
     });
 }
 
-/* =====================================
-   PERFORMANCE — REQUEST ANIMATION FRAME
-===================================== */
+/* PERFORMANCE — REQUEST ANIMATION FRAME */
 
 let projectsRevealTicking = false;
 

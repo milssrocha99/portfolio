@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milena</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="corner-threads">
+    <span class="thread thread-one"></span>
+    <span class="thread thread-two"></span>
+    <span class="thread thread-three"></span>
+    <span class="thread thread-four"></span>
+    </div>
+
+    <header>
+        <nav>
+         <a href="#home" data-i18n="nav.home">Home</a>
+         <a href="#about" data-i18n="nav.about">About</a>
+         <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
+         <a href="#skills" data-i18n="nav.skills">Skills</a>
+         <a href="#projects" data-i18n="nav.projects">Projects</a>
+         <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="language-switch">    
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="pt">PT</button>
+        </div>
+    </header>
+    <main id="home"> 
+        <section class="intro"> 
+            <span data-i18n="home.greeting"> Hi, I'm Milena </span> 
+            <h1> Creative<br> Developer </h1> 
+        </section>
+        <section class="photo-area">
+            <div class="photo-container" id="photoContainer">
+                <img src="assets/photo.png" class="photo color" alt="Milena">
+                <img src="assets/photo.png" class="photo grayscale" alt="Milena">
+                <canvas id="magicCanvas"></canvas>
+            </div>
+        </section>
+        <div class="scroll-hint"> 
+        <span data-i18n="home.scroll"> SCROLL TO SCRUB TIMELINE </span> 
+        <div class="scroll-arrow"> ↓ </div> </div>
+        <div class="photo-transition"></div>
+    </main>
+
+    <!-- ABOUT -->
+    <section id="about" class="page-section about-section">
+        <div class="about-container">
+        <div class="profile-code">
+            <span class="code-keyword">const</span>
+            <span class="code-variable">SYSTEM_PROFILE</span>
+            <span class="code-symbol">=</span>
+            <span class="code-bracket">{</span>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h2><span data-i18n="about.title"> Hello, I'm </span> 
+                    <span> Milena Rocha </span> </h2>
+                    <p data-i18n="about.description"> I'm a Full-Stack Developer focused on building complete digital solutions, from custom web interfaces and system architecture to backend development, databases, automation and deployment. </p> 
+                    <p data-i18n="about.description2"> I build projects from the ground up, combining development, web design and process automation to transform ideas into functional, efficient and scalable products. I work across the entire development cycle, from frontend and backend to databases, infrastructure and deployment. </p>
+                <div class="about-stack"> 
+                    <span>FULL-STACK</span> 
+                    <span>AUTOMATION</span> 
+                    <span>APP DEVELOPMENT</span>
+                    <span>WEB SYSTEMS</span> 
+                    <span>BACKEND</span> 
+                    <span>DATABASES</span> 
+                </div>
+            </div>
+            <div class="about-photo-area">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="photo-light"></div>
+                <div class="about-photo-frame">
+                    <div class="frame-corner corner-top"></div>
+                    <div class="frame-corner corner-bottom"></div>
+                    <span class="photo-index">01</span>
+                    <span class="photo-status">ONLINE</span>
+                    <img src="assets/pic1.png" alt="Milena Rocha">
+                </div>
+            </div>
+        </div>
+        <div class="profile-close">
+            <span class="code-bracket">}</span>
+            <span class="code-comment">// profile.loaded = true;</span>
+        </div>
+    </div>
+</section>
+
+    <!--EXPERTISE-->
+    <section id="expertise" class="page-section expertise-section">
+        <div class="expertise-container">
+            <div class="expertise-header">
+    <span class="section-number expertise-command">
+        > ./expertise --list
+    </span>
+    <h2>
+        <span data-i18n="expertise.title">Technologies</span>
+        <span data-i18n="expertise.titleAccent">I work with</span>
+    </h2>
+    <p data-i18n="expertise.description">
+        I build complete digital solutions, from web systems and applications
+        to backend, databases, APIs, automation and deployment.
+    </p>
+</div>
+        <div class="expertise-marquee">
+        <div class="expertise-track">
+            <span>PYTHON</span>
+            <span>NODE.JS</span>
+            <span>JAVASCRIPT</span>
+            <span>JAVA</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>APIs</span>
+            <span>BACKEND</span>
+            <span>FRONTEND</span>
+            <span>DATABASES</span>
+            <span>SQL</span>
+            <span>FIREBASE</span>
+            <span>GIT</span>
+            <span>GITHUB</span>
+            <span>POWERSHELL</span>
+            <span>AUTOMATION</span>
+            <span>WEB DESIGN</span>
+            <span>APP DEVELOPMENT</span>
+            <span>DEPLOYMENT</span>
+            <span>POSTMAN</span>
+            <span>FIREBASE</span>
+            
+            <span>PYTHON</span>
+            <span>NODE.JS</span>
+            <span>JAVASCRIPT</span>
+            <span>JAVA</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>APIs</span>
+            <span>BACKEND</span>
+            <span>FRONTEND</span>
+            <span>DATABASES</span>
+            <span>SQL</span>
+            <span>FIREBASE</span>
+            <span>GIT</span>
+            <span>GITHUB</span>
+            <span>POWERSHELL</span>
+            <span>AUTOMATION</span>
+            <span>WEB DESIGN</span>
+            <span>APP DEVELOPMENT</span>
+            <span>DEPLOYMENT</span>
+            <span>POSTMAN</span>
+            <span>FIREBASE</span>
+        </div>
+    </div>
+</div>
+</section>
+
+<!--  SKILLS -->
+<section id="skills" class="skills-section">
+    <div class="skills-container">
+        <div class="skills-header">
+            <div class="engineering-label">
+                <span class="engineering-symbol">~/</span>
+                <span data-i18n="skills.roadmap">
+                    Engineering Roadmap
+                </span>
+                <span class="engineering-path">
+                    /root-map
+                </span>
+                <span class="engineering-cursor"></span>
+            </div>
+            <h2 class="skills-title">
+                <span data-i18n="skills.coreTitle">
+                    Core Execution
+                </span>
+                <span data-i18n="skills.coreAccent">
+                    Root Map
+                </span>
+            </h2>
+        </div>
+        <div class="skills-map">
+            <article class="root-card root-card-01">
+                <div class="root-card-light"></div>
+                <div class="root-card-top">
+                    <span class="root-number">
+                        root 01;
+                    </span>
+                    <span class="root-status" data-i18n="skills.status">
+                        ACTIVE
+                    </span>
+                </div>
+                <div class="root-card-content">
+                    <span class="root-path">
+                        /frontend
+                    </span>
+                    <h3 data-i18n="skills.root01.title">
+                        Interface Engineering
+                    </h3>
+                    <p data-i18n="skills.root01.description">
+                        Building responsive, interactive
+                        and visually refined web interfaces.
+                    </p>
+                </div>
+                <div class="root-card-footer">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </article>
+            <article class="root-card root-card-02">
+                <div class="root-card-light"></div>
+                <div class="root-card-top">        
+                    <span class="root-number">
+                        root 02;
+                    </span>
+                    <span class="root-status" data-i18n="skills.status">
+                        ACTIVE
+                    </span>
+                </div>
+                <div class="root-card-content">
+                    <span class="root-path">
+                        /backend
+                    </span>
+                    <h3 data-i18n="skills.root02.title">
+                        System Architecture
+                    </h3>
+                    <p data-i18n="skills.root02.description">
+                        Developing APIs, server logic,
+                        authentication and scalable systems.
+                    </p>
+                </div>
+                <div class="root-card-footer">
+                    <span>Node.js</span>
+                    <span>Python</span>
+                    <span>APIs</span>
+                </div>
+            </article>
+            <article class="root-card root-card-03">
+                <div class="root-card-light"></div>
+                <div class="root-card-top">
+                    <span class="root-number">
+                        root 03;
+                    </span>
+                    <span class="root-status" data-i18n="skills.status">
+                        ACTIVE
+                    </span>
+                </div>
+                <div class="root-card-content">
+                    <span class="root-path">
+                        /database
+                    </span>
+                    <h3 data-i18n="skills.root03.title">
+                        Data Infrastructure
+                    </h3>
+                    <p data-i18n="skills.root03.description">
+                        Structuring databases, data flows
+                        and reliable application storage.
+                    </p>
+                </div>
+                <div class="root-card-footer">
+                    <span>SQL</span>
+                    <span>Firebase</span>
+                    <span>Data</span>
+                </div>
+            </article>
+            <article class="root-card root-card-04">
+                <div class="root-card-light"></div>
+                <div class="root-card-top">
+                    <span class="root-number">
+                        root 04;
+                    </span>
+                    <span class="root-status" data-i18n="skills.status">
+                        ACTIVE
+                    </span>
+                </div>
+                <div class="root-card-content">
+                    <span class="root-path">
+                        /automation
+                    </span>
+                    <h3 data-i18n="skills.root04.title">
+                        Process Automation
+                    </h3>
+                    <p data-i18n="skills.root04.description">
+                        Connecting systems and automating
+                        repetitive technical workflows.
+                    </p>
+                </div>
+                <div class="root-card-footer">
+                    <span>Automation</span>
+                    <span>Scripts</span>
+                    <span>Deploy</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="projects-section">
+<div class="projects-sticky">
+        <div class="projects-card-stage">
+
+            <!-- TÍTULO -->
+            <div class="projects-header-capsule" aria-hidden="true">
+        
+<!-- DETALHE DE PROGRAMAÇÃO -->
+<div class="projects-capsule-code" aria-hidden="true">
+    <span class="projects-code-path">~/projects</span>
+    <span class="projects-code-command">--open</span>
+    <span class="projects-code-cursor"></span>
+</div>
+                
+<div class="projects-title-stack">
+    <div class="projects-title-main"
+         data-projects-title
+         aria-label="Projects">
+    </div>
+
+</div>
+
+            </div>
+
+
+    <div class="projects-bg-orbits" aria-hidden="true">
+        <span class="orbit orbit-1"></span>
+        <span class="orbit orbit-2"></span>
+    </div>
+            <article class="project-showcase-card">
+                 <span class="card-corner corner-top-left" aria-hidden="true"></span>
+                 <span class="card-corner corner-top-right" aria-hidden="true"></span>
+                 <span class="card-corner corner-bottom-left" aria-hidden="true"></span>
+                 <span class="card-corner corner-bottom-right" aria-hidden="true"></span>
+                <div class="project-showcase-header">
+                    <h2 class="project-showcase-title">
+                        Traffic Control
+                    </h2>
+                    <a
+                        href="https://demotrafego.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-open-link"
+                    >
+                        <span data-i18n="projects.viewProject">
+                            VIEW PROJECT
+                        </span>
+                        <span>
+                            ↗
+                        </span>
+                    </a>
+                </div>
+                <div class="project-showcase-content">
+                    <div class="project-showcase-about">
+                        <p class="project-description" data-i18n="projects.description">
+                            Internal system built from scratch to manage
+                            traffic operations, vehicles, drivers, routes
+                            and operational data.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span>NODE.JS</span>
+                            <span>EXPRESS</span>
+                            <span>JAVASCRIPT</span>
+                            <span>FIREBASE</span>
+                            <span>JWT</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="project-access-grid">
+                            <div class="project-access-card">
+                                <div class="project-access-type" data-i18n="projects.userAccess">
+                                    USER
+                                </div>
+                                <div class="project-access-data">
+                                    <div>
+                                        <span data-i18n="projects.username">
+                                            USER
+                                        </span>
+                                        <strong>
+                                            user
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <span data-i18n="projects.password">
+                                            PASSWORD
+                                        </span>
+                                        <strong>
+                                            user123
+                                        </strong>
+                                    </div>
+                                </div>
+                                <p data-i18n="projects.standardAccess">
+                                    Standard system access.
+                                </p>
+                            </div>
+                            <div class="project-access-card">
+                                <div class="project-access-type">
+                                    ADMIN
+                                </div>
+                                <div class="project-access-data">
+                                    <div>
+                                        <span data-i18n="projects.username">
+                                            USER
+                                        </span>
+                                        <strong>
+                                            adm
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <span data-i18n="projects.password">
+                                            PASSWORD
+                                        </span>
+                                        <strong>
+                                            adm123
+                                        </strong>
+                                    </div>
+                                </div>
+                                <p data-i18n="projects.adminAccess">
+                                    Full access including the audit log,
+                                    where all activities performed in the
+                                    system can be monitored.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-showcase-features">
+                        <h3 data-i18n="projects.builtTitle">
+                            Built from scratch.
+                        </h3>
+                        <p class="project-development-text" data-i18n="projects.development">
+                            I developed the entire application, including
+                            interface, architecture, backend,
+                            authentication, database and deployment.
+                        </p>
+                        <div class="project-feature-list">
+                            <span data-i18n="projects.features.traffic">
+                                Traffic control
+                            </span>
+                            <span data-i18n="projects.features.vehicles">
+                                Vehicles & drivers
+                            </span>
+                            <span data-i18n="projects.features.routes">
+                                Routes
+                            </span>
+                            <span data-i18n="projects.features.passengers">
+                                Passenger data
+                            </span>
+                            <span data-i18n="projects.features.mileage">
+                                Mileage
+                            </span>
+                            <span data-i18n="projects.features.history">
+                                History & filters
+                            </span>
+                            <span data-i18n="projects.features.pdf">
+                                PDF reports
+                            </span>
+                            <span data-i18n="projects.features.audit">
+                                Audit log
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-preview">
+                    <div class="project-preview-grid">
+                        <button class="project-preview-image" type="button">
+                            <img
+                                src="assets/project1.png"
+                                alt="Traffic Control 01"
+                            >
+                        </button>
+                        <button class="project-preview-image" type="button">
+                            <img
+                                src="assets/project2.png"
+                                alt="Traffic Control 02"
+                            >
+                        </button>
+                        <button class="project-preview-image" type="button">
+                            <img
+                                src="assets/project3.png"
+                                alt="Traffic Control 03"
+                            >
+                        </button>
+                        <button class="project-preview-image" type="button">
+                            <img
+                                src="assets/project4.png"
+                                alt="Traffic Control 04"
+                            >
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<div class="project-lightbox" id="projectLightbox" aria-hidden="true">
+    <div
+        class="project-lightbox-card"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Project image preview"
+    >
+        <button
+            class="project-lightbox-close"
+            id="projectLightboxClose"
+            type="button"
+            aria-label="Close image"
+        >
+            ×
+        </button>
+        <div class="project-lightbox-image-wrapper">
+            <img
+                id="projectLightboxImage"
+                src=""
+                alt=""
+            >
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <div class="contact-layout">
+            <div class="contact-left">
+                <div class="contact-heading">
+                    <div class="contact-command">
+                        <span>//</span>
+                        <span>CONTACT.EXE</span>
+                    </div>
+                    <h2 class="contact-title">
+                        <span data-i18n="contact.title">
+                            Let's
+                        </span>
+                        <span data-i18n="contact.titleAccent">
+                            Talk.
+                        </span>
+                    </h2>
+                </div>
+                <div class="contact-globe">
+                    <div class="earth-canvas-container">
+                        <canvas id="earthFlashCanvas"></canvas>
+                        <canvas id="earthCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- RIGHT -->
+            <div class="contact-right">
+                <div class="contact-intro">
+                    <p class="contact-intro-line" data-i18n="contact.intro">
+                        Great ideas begin with a connection.
+                    </p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:milenarocha1999@hotmail.com" class="contact-link">
+                        <span class="contact-link-main">
+                            <span class="contact-link-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M3 5.5h18v13H3z"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                    />
+                                    <path
+                                        d="M3.5 6l8.5 7 8.5-7"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"/>
+                                </svg>
+                            </span>
+                            <span>EMAIL</span>
+                        </span>
+                        <span class="contact-link-arrow">
+                            ↗
+                        </span>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/milssrocha/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link"
+                    >
+                        <span class="contact-link-main">
+                            <span class="contact-link-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path
+                                        fill="currentColor"
+                                        d="M5.3 8.2H2.2V22h3.1V8.2ZM3.75 2A1.8 1.8 0 1 0 3.75 5.6 1.8 1.8 0 0 0 3.75 2ZM21.8 13.9c0-4.15-2.2-6.08-5.15-6.08-2.38 0-3.44 1.31-4.03 2.23V8.2H9.5V22h3.12v-6.83c0-1.8.34-3.55 2.58-3.55 2.2 0 2.23 2.06 2.23 3.67V22h3.12v-7.63c0-.16 0-.31-.01-.47h1.26Z"/>
+                                </svg>
+                            </span>
+                            <span>LINKEDIN</span>
+                        </span>
+                        <span class="contact-link-arrow">
+                            ↗
+                        </span>
+                    </a>
+                    <a
+                        href="https://github.com/milsrocha99"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link"
+                    >
+                        <span class="contact-link-main">
+                            <span class="contact-link-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M12 2C6.48 2 2 6.58 2 12.24c0 4.52 2.87 8.35 6.84 9.71.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.91-2.78.62-3.37-1.2-3.37-1.2-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .08 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.94a9.3 9.3 0 0 1 2.5.34c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.35 4.81-4.58 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z"
+                                    />
+                                </svg>
+                            </span>
+                            <span>GITHUB</span>
+                        </span>
+                        <span class="contact-link-arrow">
+                            ↗
+                        </span>
+                    </a>
+                </div>
+                <div class="contact-card message-module">
+                    <form
+                    id="contactForm"
+                    class="contact-form">
+                <div class="terminal-field">
+                <label for="contactName" data-i18n="contact.name">NAME</label>
+                <input
+                id="contactName"
+                type="text"
+                name="name"
+                data-i18n-placeholder="contact.namePlaceholder"
+                placeholder="Your name"
+                required
+                >
+            </div>
+            <div class="terminal-field">
+                <label for="contactEmail" data-i18n="contact.email">
+                    EMAIL
+                </label>
+                <input
+                id="contactEmail"
+                type="email"
+                name="email"
+                data-i18n-placeholder="contact.emailPlaceholder"
+                placeholder="Your email"
+                required>
+            </div>
+            <div class="terminal-message">
+                <textarea
+                id="contactMessage"
+                name="message"
+                data-i18n-placeholder="contact.messagePlaceholder"
+                placeholder="Write your message..."
+                required></textarea>
+            </div>
+            <div class="form-bottom">
+                <button
+                type="submit"
+                class="send-button">
+                <span data-i18n="contact.send">
+                    SEND MESSAGE
+                </span>
+                <span>
+                    →
+                </span>
+                </button>
+            </div>
+        </form>
+    </div>            
+    <div class="contact-mini-status">            
+        <div class="contact-ready">
+            <span class="connection-live-dot"></span>    
+            <span data-i18n="contact.ready">      
+                READY     
+            </span>
+        </div>
+        <span class="mini-status-separator">
+            /
+        </span>
+        <span class="contact-status-location">
+            GMT-3 · BR
+        </span>
+    </div>
+</div>
+</div>
+</div>
+</section>
+
+<script src="js/portfolio.js"></script>
+<script type="module" src="contact-firebase.js"></script>
+</body>
+</html>

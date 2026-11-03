@@ -3788,81 +3788,139 @@ margin-bottom: 35px;
     flex-shrink: 0;
 }
 
-/* HOME — VERSÃO MOBILE */
+/* ====================================
+   HOME — MOBILE
+==================================== */
+
 @media screen and (max-width: 600px) {
 
     #home {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
         height: 100svh;
         min-height: 100svh;
+
+        padding-top: 13svh;
+        box-sizing: border-box;
         overflow: hidden;
     }
 
-    /* FOTO MAIS PARA CIMA */
-    .photo-area {
-        position: absolute;
-        inset: 0;
+    /* FOTO EM CIMA */
+    #home .photo-area {
+        position: relative;
+        inset: auto;
+
+        order: 1;
+
+        width: 100%;
+        height: 52svh;
+        flex-shrink: 0;
+
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: flex-end;
+
+        overflow: hidden;
         pointer-events: none;
     }
 
-    .photo-container {
+    #home .photo-container {
         position: relative;
-        width: 100vw;
-        height: 68%;
+
+        width: 100%;
+        max-width: none;
+        height: 100%;
+
+        overflow: hidden;
         pointer-events: auto;
+
+        /* Deslizar na foto não rola a página */
+        touch-action: none;
     }
 
-    .photo {
+    #home .photo {
         position: absolute;
+
         left: 50%;
         bottom: 0;
-        transform: translateX(-50%);
+
         width: 100%;
         height: 100%;
-        object-fit: contain;
-        object-position: center bottom;
+
+        object-fit: cover;
+        object-position: center center;
+
+        transform: translateX(-50%) scale(1.15);
+        transform-origin: center center;
+
+        pointer-events: none;
+        user-select: none;
+        -webkit-user-drag: none;
     }
 
     /* TEXTO ABAIXO DA FOTO */
-    .intro {
-        position: absolute;
-        top: 70%;
+    #home .intro {
+        position: relative;
+
+        order: 2;
+
+        top: auto;
         bottom: auto;
-        left: 0;
-        width: 100%;
-        padding: 0 7%;
-        box-sizing: border-box;
+        left: auto;
+        right: auto;
+
         transform: none;
+
+        width: 100%;
+        padding: 18px 20px 0;
+        box-sizing: border-box;
+
         text-align: center;
         z-index: 20;
     }
 
-    .intro span {
+    #home .intro span {
+        display: block;
+
         font-size: 11px;
         letter-spacing: 2px;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
     }
 
-    .intro h1 {
-        font-size: clamp(38px, 11vw, 52px);
-        line-height: 0.95;
+    #home .intro h1 {
+        font-size: clamp(38px, 10vw, 52px);
+        line-height: 1;
         letter-spacing: -2px;
-    }
-}
-
-/* INTERAÇÃO COM A FOTO NO CELULAR */
-@media screen and (max-width: 600px) {
-
-    .photo-container {
-        touch-action: none;
+        margin: 0;
     }
 
-    .photo {
+    /* INDICAÇÃO DE SCROLL */
+    #home .scroll-hint {
+        position: relative;
+
+        order: 3;
+
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+
+        transform: none;
+
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: 25px;
+
+        text-align: center;
         pointer-events: none;
-        user-select: none;
-        -webkit-user-drag: none;
+    }
+
+    #home .photo-transition {
+        pointer-events: none;
     }
 }

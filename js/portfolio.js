@@ -187,24 +187,52 @@ function revelarCor(event) {
     grayscalePhoto.style.webkitMaskImage = mask;
 }
 
-// FUNCIONA COM MOUSE E DEDO
-container.addEventListener("pointermove", (event) => {
-    if (event.pointerType === "touch" && event.buttons === 0) {
-        return;
-    }
 
-    revelarCor(event);
-});
+/* CONTROLE DO TOQUE NA FOTO */
 
-// REVELA A COR AO ENCOSTAR O DEDO
+let activeTouchId = null;
+
+// Começa a revelar ao tocar
 container.addEventListener("pointerdown", (event) => {
+
     if (event.pointerType === "touch") {
+        activeTouchId = event.pointerId;
+
         container.setPointerCapture(event.pointerId);
     }
 
     revelarCor(event);
 });
 
+// Acompanha o dedo ou mouse
+container.addEventListener("pointermove", (event) => {
+
+    if (event.pointerType === "touch") {
+
+        if (event.pointerId !== activeTouchId) {
+            return;
+        }
+    }
+
+    revelarCor(event);
+});
+
+// Finaliza o toque
+container.addEventListener("pointerup", (event) => {
+
+    if (event.pointerId === activeTouchId) {
+        activeTouchId = null;
+    }
+
+});
+
+container.addEventListener("pointercancel", (event) => {
+
+    if (event.pointerId === activeTouchId) {
+        activeTouchId = null;
+    }
+
+});
 
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;

@@ -1216,21 +1216,6 @@ margin-bottom: 35px;
 }
 
 
-@media screen and (max-width: 600px) {
-    .language-switch {
-        position: fixed;
-
-        top: auto;
-        bottom: calc(25px + env(safe-area-inset-bottom, 0px));
-
-        left: auto;
-        right: 20px;
-
-        z-index: 1000;
-    }
-}
-
-
 /* LINHAS DECORATIVAS NOS CANTOS */
 .corner-threads {
     position: fixed;
@@ -3909,7 +3894,8 @@ margin-bottom: 35px;
         top: auto;
         bottom: auto;
 
-        transform: translateX(8px);
+        transform: none;
+        padding-left: 24px;
 
         display: flex;
         justify-content: center;
@@ -3935,13 +3921,14 @@ margin-bottom: 35px;
     .language-switch {
         position: fixed;
 
-        /* Remove posição do topo */
-        top: auto;
-        left: auto;
-
-        /* Fixo no canto inferior direito */
+        top: auto;   
         bottom: calc(25px + env(safe-area-inset-bottom, 0px));
+
+        left: auto;   
         right: 20px;
+
+        transform: none;   
+        z-index: 9999;
 
         display: flex;
         align-items: center;
@@ -3951,17 +3938,13 @@ margin-bottom: 35px;
         padding: 5px;
 
         border-radius: 14px;
-
         background: rgba(20, 20, 20, 0.85);
 
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
 
         border: 1px solid rgba(255, 255, 255, 0.12);
-
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-
-        z-index: 300;
     }
 
     .language-switch .lang-btn {
